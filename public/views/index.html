@@ -11,7 +11,13 @@
   </head>
   <body ng-app="myApp">
     <div class="jumbotron"><h1>Favorite Movies</h1></div>
-    <div ng-controller="AssignmentController as ac"></div>
+    <div ng-controller="MovieController as mc" ng-init="mc.movies()>
+
+    <input type="text" placeholder="Movie Title" value="" ng-model="mc.movieTitleIn">
+    <button ng-click="mc.requestMovie()" class="btn">Submit</button>
+
+
+    </div>
 
   </body>
 </html>
