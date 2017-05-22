@@ -1,0 +1,13 @@
+
+<h2>Search Page!</h2>
+
+<input type="text" class="form-control" ng-model="vm.searchText">
+<button type="button" name="button" class="btn btn-primary" ng-click="vm.search(vm.searchText)">Search Movie Database</button>
+
+
+
+<div ng-repeat="movie in vm.searchResult.details" class="col-xs-12 col-sm-6 col-md-4">
+  <hr>
+  <h2 class="col-xs-10">{{movie.Title}} | {{movie.Year}}</h2>
+  <img  class="col-xs-10" ng-src="{{movie.Poster}}" alt=""> <button type="button" name="button" class="btn btn-primary" ng-click="vm.saveFavorite(movie)">Save Movie</button>
+</div>

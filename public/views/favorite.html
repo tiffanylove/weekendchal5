@@ -1,0 +1,9 @@
+<h2>Favorites Page!</h2>
+
+
+<div ng-repeat="movie in vm.favorite.list" class="col-xs-10 col-sm-6 col-md-4">
+  <hr>
+  <h2 class="col-xs-10">{{movie.Title}} | {{movie.Year}}</h2>
+  <img  class="col-xs-10" ng-src="{{movie.Poster}}" alt="">
+  <button type="button" name="button" class="btn btn-primary" ng-click="vm.removeFavorite(movie._id)">Remove</button>
+</div>

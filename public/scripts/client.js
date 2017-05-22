@@ -1,27 +1,23 @@
-var myApp = angular.module('myApp',[]);
 
-myApp.controller('MovieController', function($http){
-  console.log('controller');
+var myApp = angular.module('movieApp', ['ngRoute']);
 
-   var vm = this;
-   vm.test = 'Hello';
-   vm.movies = [];
+// Angular config
+//routeProvider for client side
+app.config(['$routeProvider', function($routeProvider) {
 
 
-
-
-
-
-
-   vm.requestMovie = function(){
-    //  MovieTracker.getMovies().then(function(data){
-    $http({
-      method: 'GET',
-      url:'http://www.omdbapi.com/?s=<user search string>'
-    }).then(function success(response){
-      console.log('omdb response', response.data);
-       vm.movieData = response.data;
-       vm.movieData.push(vm.movies);
-     });
-   };
-});
+ $routeProvider
+   .when('/search', {
+     templateUrl: 'views/search.html',
+     controller: 'omdbController',
+     controllerAs: 'vm'
+   })
+   .when('/favorites', {
+     templateUrl: 'views/favorites.html',
+     controller: 'favoritesController',
+     controllerAs: 'vm'
+   })
+   .otherwise({
+     template: '<h2>404 error!</h2>'
+   });
+}]);
