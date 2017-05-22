@@ -21,7 +21,7 @@ mongoose.connection.on('error', function() {
   console.log('Not connected to DB');
 });
 
-// app.use('/movies', movies);
+// favorites route
 app.use('/favorites', favorite);
 
 
