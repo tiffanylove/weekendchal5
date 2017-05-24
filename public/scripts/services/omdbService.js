@@ -1,4 +1,4 @@
-app.service('searchService', ['$http', function($http){
+myApp.service('searchService', ['$http', function($http){
   var vm = this;
 
   vm.searchResult = { details: [] };

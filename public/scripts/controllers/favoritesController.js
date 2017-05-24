@@ -1,4 +1,4 @@
-app.controller('favoritesController', ['favoritesService', function(favoritesService) {
+myApp.controller('favoritesController', ['favoritesService', function(favoritesService) {
   console.log('In favoritesController');
   var vm = this;
   //connects to the view

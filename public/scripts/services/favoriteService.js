@@ -1,4 +1,4 @@
-app.service('favoriteService', ['$http', function($http){
+myApp.service('favoriteService', ['$http', function($http){
   var vm = this;
 
   vm.favorite = { list:[] };

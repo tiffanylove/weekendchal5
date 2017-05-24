@@ -3,7 +3,7 @@ var myApp = angular.module('movieApp', ['ngRoute']);
 
 // Angular config
 //routeProvider for client side
-app.config(['$routeProvider', function($routeProvider) {
+myApp.config(['$routeProvider', function($routeProvider) {
 
 
  $routeProvider
